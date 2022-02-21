@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  auth0Domain: process.env['NX_Domain'] ?? '',
+  auth0ClientId: process.env['NX_CLIENT_ID'] ?? '',
 };
 
 /*
