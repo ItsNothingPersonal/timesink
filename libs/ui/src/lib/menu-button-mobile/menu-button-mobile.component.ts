@@ -10,6 +10,8 @@ import { MenuButton } from '../menu-button';
 export class MenuButtonMobileComponent {
   @Input() menuButtons: MenuButton[] = [];
 
+  @Input() showAuthButton = false;
+
   constructor(private router: Router) {}
 
   menuButtonClick(route: string | undefined, params: string[] | undefined) {
