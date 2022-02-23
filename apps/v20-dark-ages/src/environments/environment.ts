@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  auth0Domain: process.env['NX_Domain'] ?? '',
-  auth0ClientId: process.env['NX_CLIENT_ID'] ?? '',
+  auth0Domain: 'timesink.eu.auth0.com',
+  auth0ClientId: '9V9LU2Kn6xfgCEYu5FmJPhbTk3RxrMHe',
 };
 
 /*
