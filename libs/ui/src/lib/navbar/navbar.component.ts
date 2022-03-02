@@ -15,6 +15,9 @@ export class NavbarComponent implements OnInit {
   @Input()
   menuButtons: MenuButton[] = [];
 
+  @Input()
+  showAuthButton = false;
+
   isMobile = false;
   mobileViewPortSize = 640;
 

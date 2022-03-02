@@ -8,9 +8,13 @@
       [entries]="menuButton.entries"
       [type]="menuButton.type !== undefined ? menuButton.type : 'primary'"
     ></timesink-menu-button>
+    <timesink-auth-button *ngIf="showAuthButton"></timesink-auth-button>
   </div>
 </mat-toolbar>
 
 <ng-template #mobileMenu>
-  <timesink-menu-button-mobile [menuButtons]="menuButtons"></timesink-menu-button-mobile>
+  <timesink-menu-button-mobile
+    [menuButtons]="menuButtons"
+    [showAuthButton]="showAuthButton"
+  ></timesink-menu-button-mobile>
 </ng-template>

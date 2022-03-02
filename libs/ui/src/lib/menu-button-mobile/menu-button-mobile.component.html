@@ -1,12 +1,12 @@
 <button
   mat-icon-button
-  [matMenuTriggerFor]="animals"
+  [matMenuTriggerFor]="mobileMenu"
   aria-label="Mobile Menu for the V20 Dark Ages App"
 >
   <mat-icon>more_vert</mat-icon>
 </button>
 
-<mat-menu #animals="matMenu">
+<mat-menu #mobileMenu="matMenu">
   <ng-container *ngFor="let button of menuButtons">
     <button
       *ngIf="button.entries.length > 1; else directButton"
@@ -35,4 +35,6 @@
       </button>
     </mat-menu>
   </ng-container>
+
+  <timesink-auth-button *ngIf="showAuthButton"></timesink-auth-button>
 </mat-menu>

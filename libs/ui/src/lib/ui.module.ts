@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuButtonMobileComponent } from './menu-button-mobile/menu-button-mobile.component';
 import { TableComponent } from './table/table.component';
+import { AuthButtonComponent } from './auth-button/auth-button.component';
 
 @NgModule({
   imports: [
@@ -24,12 +25,14 @@ import { TableComponent } from './table/table.component';
     MenuButtonComponent,
     MenuButtonMobileComponent,
     TableComponent,
+    AuthButtonComponent,
   ],
   exports: [
     NavbarComponent,
     MatIconModule,
     MenuButtonComponent,
     TableComponent,
+    AuthButtonComponent,
   ],
 })
 export class UiModule {}
