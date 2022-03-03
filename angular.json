@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "feature-profile-page": "libs/feature-profile-page",
     "feature-v20-character-display": "libs/feature-v20-character-display",
     "feature-v20-entity-page": "libs/feature-v20-entity-page",
     "feature-v20-exp-history": "libs/feature-v20-exp-history",
