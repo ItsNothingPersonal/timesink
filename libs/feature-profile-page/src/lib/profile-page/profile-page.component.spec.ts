@@ -1,7 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { AuthService, IdToken, User } from '@auth0/auth0-angular';
-import { of, Observable } from 'rxjs';
-import { AuthButtonComponent } from './auth-button.component';
+import { Observable, of } from 'rxjs';
+import { ProfilePageComponent } from './profile-page.component';
 
 export class MockAuthService {
   isAuthenticated$ = of(true);
@@ -16,19 +19,20 @@ export class MockAuthService {
   }
 }
 
-describe('AuthButtonComponent', () => {
-  let component: AuthButtonComponent;
-  let fixture: ComponentFixture<AuthButtonComponent>;
+describe('ProfilePageComponent', () => {
+  let component: ProfilePageComponent;
+  let fixture: ComponentFixture<ProfilePageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AuthButtonComponent],
+      imports: [CommonModule, MatFormFieldModule, MatInputModule],
       providers: [{ provide: AuthService, useValue: new MockAuthService() }],
+      declarations: [ProfilePageComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AuthButtonComponent);
+    fixture = TestBed.createComponent(ProfilePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

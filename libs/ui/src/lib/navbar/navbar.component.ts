@@ -1,7 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuButton } from '../menu-button';
-import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'timesink-navbar',
