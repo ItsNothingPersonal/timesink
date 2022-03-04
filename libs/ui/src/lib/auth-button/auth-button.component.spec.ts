@@ -1,10 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AuthService } from '@auth0/auth0-angular';
+import { AuthService, IdToken, User } from '@auth0/auth0-angular';
+import { of, Observable } from 'rxjs';
 import { AuthButtonComponent } from './auth-button.component';
 
 export class MockAuthService {
-  public handleAuth(): void {
+  isAuthenticated$ = of(true);
+  public loginWithRedirect(): void {
     return;
+  }
+  public getUser(): Observable<User> {
+    return of({ name: 'Test', email: 'test@test.de' });
+  }
+  public getIdTokenClaims(): Observable<IdToken> {
+    return of({ __raw: 'test', name: 'test', email: 'test@test.de' });
   }
 }
 
