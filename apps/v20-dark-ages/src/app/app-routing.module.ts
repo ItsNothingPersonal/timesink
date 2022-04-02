@@ -7,7 +7,11 @@ import { V20DaHomeComponent } from '@timesink/feature-v20-home';
 import { V20DaImpressumComponent } from '@timesink/feature-v20-impressum';
 import { V20DaJournalComponent } from '@timesink/feature-v20-journal';
 import { V20DaNpcComponent } from '@timesink/feature-v20-npc-display';
-import { V20DaRuleInfoComponent } from '@timesink/feature-v20-rule-info';
+import {
+  V20DaRuleInfoDiceAndDifficultiesComponent,
+  V20DaRuleInfoFrenzyAndRoetschreckComponent,
+  V20DaRuleInfoRoadsAndDegenerationComponent,
+} from '@timesink/feature-v20-rule-info';
 import { V20DaSpotifyPlaylistComponent } from '@timesink/feature-v20-spotify-playlist';
 import { LoginActivateGuard } from './../../login-activate.guard';
 
@@ -23,7 +27,18 @@ const routes: Routes = [
   { path: 'journal', component: V20DaJournalComponent },
   { path: 'exp-history', component: V20DaExpHistoryComponent },
   { path: 'spotify-playlist', component: V20DaSpotifyPlaylistComponent },
-  { path: 'rules-info', component: V20DaRuleInfoComponent },
+  {
+    path: 'rules-info/dice-and-difficulties',
+    component: V20DaRuleInfoDiceAndDifficultiesComponent,
+  },
+  {
+    path: 'rules-info/frenzy-and-roetschreck',
+    component: V20DaRuleInfoFrenzyAndRoetschreckComponent,
+  },
+  {
+    path: 'rules-info/roads-and-degeneration',
+    component: V20DaRuleInfoRoadsAndDegenerationComponent,
+  },
   {
     path: 'impressum',
     component: V20DaImpressumComponent,

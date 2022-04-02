@@ -35,7 +35,7 @@ export class V20DaCharacterService {
       },
       {
         name: 'Ulrich',
-        surname: '',
+        surname: '-',
         clan: 'Tremere',
         imageSrc: '/assets/ulrich.jpg',
         apparentAge: undefined,

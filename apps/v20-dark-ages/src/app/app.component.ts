@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 import { V20DaCharacterService } from '@timesink/feature-v20-character-display';
 import { V20DaNpcService } from '@timesink/feature-v20-npc-display';
@@ -42,7 +42,9 @@ export class AppComponent implements OnInit {
       label: 'Charaktere',
       entries: this.characters.map((character) => {
         return {
-          label: `${character.name} ${character.surname}`,
+          label: `${character.name} ${
+            character.surname === '-' ? '' : character.surname
+          }`,
           route: '/character',
           params: [character.surname, character.name],
         };
@@ -72,7 +74,7 @@ export class AppComponent implements OnInit {
       label: 'NPCs',
       entries: this.npcs.map((npc) => {
         return {
-          label: `${npc.name} ${npc.surname}`,
+          label: `${npc.name} ${npc.surname === '-' ? '' : npc.surname}`,
           route: '/npc',
           params: [npc.surname, npc.name],
         };
@@ -82,8 +84,20 @@ export class AppComponent implements OnInit {
 
     this.rulesInfoButton = {
       label: 'Regel Infos',
-      entries: [{ label: 'Regel Infos', route: '/rules-info' }],
-      isRendered: of(true),
+      entries: [
+        {
+          label: 'Würfeln & Schwierigkeiten',
+          route: '/rules-info/dice-and-difficulties',
+        },
+        {
+          label: 'Frenzy & Rötschreck',
+          route: '/rules-info/frenzy-and-roetschreck',
+        },
+        {
+          label: 'Roads & Degeneration',
+          route: '/rules-info/roads-and-degeneration',
+        },
+      ],
     };
 
     this.impressumButton = {

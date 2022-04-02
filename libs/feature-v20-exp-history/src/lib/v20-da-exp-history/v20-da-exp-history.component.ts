@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class V20DaExpHistoryComponent {
   tableHeaders: string[] = ['Datum', 'Veränderung'];
-  tableRows: string[][] = [['14.02.2022', '+3']];
+  tableRows: string[][] = [
+    ['14.02.2022', '+3'],
+    ['28.02.2022', '+4'],
+    ['21.03.2022', '+5'],
+  ];
 }

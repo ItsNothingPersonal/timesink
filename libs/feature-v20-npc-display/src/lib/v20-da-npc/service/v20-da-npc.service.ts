@@ -11,7 +11,7 @@ export class V20DaNpcService {
     this.npcs = [
       {
         name: 'Gotzon',
-        surname: '',
+        surname: '-',
         clan: 'Lasombra',
         imageSrc: undefined,
         apparentAge: undefined,
@@ -40,6 +40,14 @@ export class V20DaNpcService {
         imageSrc: undefined,
         apparentAge: 50,
         position: 'Sultana von Sevilla',
+      },
+      {
+        name: 'Ordonio',
+        surname: 'de Toledo',
+        clan: 'Lasombra',
+        imageSrc: undefined,
+        apparentAge: 40,
+        position: undefined,
       },
     ];
   }
